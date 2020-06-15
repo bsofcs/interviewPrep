@@ -2,12 +2,14 @@ def findRotatedIndex(arr,low,high):
  if arr is None or low is None or high is None:
   return
  if low>high:
-  return -1
+  return None
+ if low==high:
+  return low
  mid=low+(high-low)//2
- if arr[mid]<arr[mid-1] and mid<=high:
+ if arr[mid]>arr[mid+1] and mid<high:
+  return mid+1
+ elif arr[mid]<arr[mid-1] and mid>low:
   return mid
- elif arr[mid]<arr[mid-1] and mid>=low:
-  return mid-1
  elif arr[mid]>arr[high] and arr[mid]>arr[low]:
   return findRotatedIndex(arr,mid+1,high)
  else:
@@ -45,7 +47,7 @@ val=2
 print(findElementInRotatedArray(arr,val))
 val=1
 print(findElementInRotatedArray(arr,val))
-"""
+
 #Other Test Cases
 arr=[10,15,1,3,8]
 low=0
@@ -66,4 +68,3 @@ arr=[4,5,7,9,10,0]
 low=0
 high=len(arr)-1
 print(findRotatedIndex(arr,low,high))
-"""
