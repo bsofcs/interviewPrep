@@ -4,6 +4,7 @@ so the we need to find a small range in which the val is likely to exist like
 val>arr[low] and val<arr[high]
 as the array is sorted so the number must exist in between them or not
 once range is obtained we can use Interpolation Search
+We use Interpolation as the array is infinite in size and sorted so the elements will be evenly distributed
 """
 import math
 def interpolationSearch(arr,low,high,val):
