@@ -23,6 +23,9 @@ def printChess(arr):
  print("\n")
 
 """
+We try to create the state-tree with each possible combination
+for each queen in one branch of tree. Once the tree traversal is complete 
+we reset the previous position to null and move to next posisiton
 """
 
 def NQueenUtil(n,arr,x=0):
