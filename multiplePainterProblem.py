@@ -19,3 +19,7 @@ A = 10
 B = 1
 C = [1, 8, 11, 3]
 print(multiplePainterProblem(A,B,C))
+A = 2 
+B = 1
+C = [1,5,6,4,3]
+print(multiplePainterProblem(A,B,C))
