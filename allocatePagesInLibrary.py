@@ -32,3 +32,6 @@ def allocatePagesInLibrary(A,B):
 A = [12, 34, 67, 90]
 B = 2
 print(allocatePagesInLibrary(A,B))
+A = [5, 17, 100, 11]
+B = 4
+print(allocatePagesInLibrary(A,B))
