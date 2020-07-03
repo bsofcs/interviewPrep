@@ -24,5 +24,5 @@ root.right.right=Node(6)
 root.left=Node(2)
 root.left.left=Node(1)
 root.left.right=Node(3)
-p=1;q=3
+p=1;q=16
 print(LCA(root,p,q).data)
