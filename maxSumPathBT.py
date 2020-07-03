@@ -27,3 +27,31 @@ class Solution:
   sumTot=max(sumTot,max_top)
   return(max_single)
         
+
+"""
+Another Way
+"""
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+sumTot=0
+class Solution:
+ def maxPathSum(self, root: TreeNode) -> int:
+  global sumTot
+  if root is None:
+    return 0
+  sumTot=root.val
+  self.maxPathSumUtil(root)
+  return(sumTot)
+
+ def maxPathSumUtil(self,root):
+  global sumTot
+  if root is None:
+   return(0)
+  lh=self.maxPathSumUtil(root.left)
+  rh=self.maxPathSumUtil(root.right)
+  sumTot=max(sumTot,root.val+max(lh,rh),root.val,root.val+lh+rh)
+  return(max(root.val+max(lh,rh),root.val))
